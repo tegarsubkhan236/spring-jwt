@@ -36,3 +36,43 @@ This project demonstrates how to implement **JWT (JSON Web Token)** authenticati
     "expiresIn": 3600000
 }
 ```
+
+#### Me
+```bash
+  curl -v localhost:8080/users/me
+```
+```json
+{
+  "id": 2,
+  "fullName": "admin",
+  "email": "admin@email.com",
+  "password": "$2a$10$fcZhzBGSh1be2ZGnbfoIleYL6Dtehl9UfgZ9kpSCyASVJQ5f9WS.m",
+  "enabled": true,
+  "accountNonLocked": true,
+  "authorities": [],
+  "username": "admin@email.com",
+  "accountNonExpired": true,
+  "credentialsNonExpired": true
+}
+```
+
+#### Users
+```bash
+  curl -v localhost:8080/users
+```
+```json
+[
+    {
+        "id": 1,
+        "fullName": "admin",
+        "email": "admin@email.com",
+        "password": "$2a$10$fcZhzBGSh1be2ZGnbfoIleYL6Dtehl9UfgZ9kpSCyASVJQ5f9WS.m",
+        "enabled": true,
+        "accountNonLocked": true,
+        "authorities": [],
+        "username": "admin@email.com",
+        "accountNonExpired": true,
+        "credentialsNonExpired": true
+    }
+]
+```
